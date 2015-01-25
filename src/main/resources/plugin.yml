@@ -1,7 +1,7 @@
 name: iTag
-version: 1.0.0
+version: ${project.build.version}
 description: Name tag API which is backwards compatible with TagAPI
-author: md_5
+authors: [md_5, Postremus]
 load: STARTUP
 main: org.kitteh.tag.TagAPI
 depend: [ProtocolLib]

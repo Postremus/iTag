@@ -13,6 +13,12 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
+	
+	<parent>
+		<groupId>de.pro_crafting</groupId>
+		<artifactId>Core</artifactId>
+		<version>0.1.1-SNAPSHOT</version>
+	</parent>
 
 	<build>
 		<plugins>
