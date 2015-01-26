@@ -50,9 +50,9 @@ public class iTag extends JavaPlugin implements Listener
 	            		event.getPacket().getGameProfiles().write( 0, namedProfile);
 	            	}
             	} else if (clientVersion == 47 && Bukkit.getVersion().contains("1.7") && event.getPacket().getType() == PacketType.Play.Server.PLAYER_INFO) {
-            		WrappedGameProfile namedProfile = getSentName(event.getPacket().getGameProfiles().read( 0 ), event.getPlayer() );
             		WrappedGameProfile profile = event.getPacket().getGameProfiles().read(0);
-            		if (!namedProfile.getName().equals(profile) && event.getPlayer().getName().equals(profile)) {
+            		WrappedGameProfile namedProfile = getSentName(profile, event.getPlayer() );
+            		if (!namedProfile.getName().equals(profile.getName()) && !event.getPlayer().getName().equals(profile.getName())) {
 		                cache.changeSkin(event.getPlayer(), namedProfile);
 	            		event.getPacket().getGameProfiles().write( 0, namedProfile);
 	            	}
